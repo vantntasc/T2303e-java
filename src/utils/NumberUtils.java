@@ -9,4 +9,13 @@ public class NumberUtils {
 //        }
         return a < b ? a : b;
     }
+    public static int findUCLN(int a , int b){ // a >= b
+        int temp;
+        while (b != 0){
+            temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
+    }
 }

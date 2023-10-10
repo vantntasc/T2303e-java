@@ -10,14 +10,15 @@ public class Lab1 {
         System.out.println("Please enter b : ");
         int b = ConsoleUtils.getInt();
         // sollution1
-        int UCLN = 0;
-        for (int i = 1; i <= NumberUtils.getMinValue(a, b); i++) {
-            if (a % i == 0 && b % i == 0) {
-                // i  : UC
-                UCLN = i;
-            }
-        }
-        System.out.println(String.format("UCLN of %d and %d is  %d", a, b, UCLN));
+//        int UCLN = 0;
+//        for (int i = 1; i <= NumberUtils.getMinValue(a, b); i++) {
+//            if (a % i == 0 && b % i == 0) {
+//                // i  : UC
+//                UCLN = i;
+//            }
+//        }
+        System.out.println(String.format("UCLN of %d and %d is  %d", a, b,
+                (a > b) ? NumberUtils.findUCLN(a, b) : NumberUtils.findUCLN(b, a)));
 
     }
 }
