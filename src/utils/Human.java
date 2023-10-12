@@ -1,9 +1,13 @@
+package utils;
+
+import session5.Student;
+
 // a program to display message 'Hello World'
 /*
 
  */
 public class Human {
-    private long id;
+    public long id;
 
     static String schoolName  = "FPT-APTECH";
     // attributes
@@ -15,6 +19,81 @@ public class Human {
     double  weight;
 
     public Human() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public static String getSchoolName() {
+        return schoolName;
+    }
+
+    public static void setSchoolName(String schoolName) {
+        Human.schoolName = schoolName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    // convert human  -> student
+    public Student grow(){
+        Student s = null;
+        if(this.age >= 3){
+            s = new Student();
+            s.setName(this.name);
+            s.setAge(this.age);
+        }
+        return s;
+    }
+
+    public Human(String name){
+        this.name = name;
     }
 
     public Human(String name, int age, String address, String email, String tel, double weight) {

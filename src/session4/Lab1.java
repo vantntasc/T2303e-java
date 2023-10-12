@@ -19,6 +19,18 @@ public class Lab1 {
 //        }
         System.out.println(String.format("UCLN of %d and %d is  %d", a, b,
                 (a > b) ? NumberUtils.findUCLN(a, b) : NumberUtils.findUCLN(b, a)));
+//        String dayInWeek  = "MONDAY";
+//        switch (dayInWeek){
+//            case "MONDAY" :
+//                // code run in here
+//                dayInWeek = "TUESDAY";
+//            case "TUESDAY" :
+//                break;
+//            default:
+//                break;
+//        }
+
+
 
     }
 }
