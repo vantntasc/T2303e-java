@@ -21,6 +21,7 @@ public class StaticLab {
     public static void main(String[] args) {
         System.err.println(num);
         Employee.UserInfo userInfo = new Employee.UserInfo();
+        // send message -> sms, email , chat , push notification app
     }
 
 }

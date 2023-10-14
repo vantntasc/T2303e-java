@@ -29,10 +29,6 @@ public class NumberUtils {
         return random.nextInt((max - min +1)) + min ;
     }
 
-
-
-
-
     public static int getMinValue(int a , int b){
 //        if(a < b ) {
 //            return a;
