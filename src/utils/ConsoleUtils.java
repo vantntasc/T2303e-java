@@ -1,11 +1,13 @@
 package utils;
 
+import session6.StaticLab;
+
 import java.sql.SQLOutput;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class ConsoleUtils {
-    public static int getInt(Integer minValue , Integer maxValue){  // same name  , same output type  , different input
+    public static int getInt(Integer minValue , Integer maxValue){  // same name  , same output type  , different input\
         // overloading
         Scanner scanner = new Scanner(System.in);
         boolean valid = false;
