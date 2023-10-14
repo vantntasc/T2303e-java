@@ -3,8 +3,9 @@ package utils;
 import java.util.Random;
 
 public class NumberUtils {
+//    public synchronized int num = 1;
 
-    private static Random random = new Random();
+    private static  Random random = new Random();
 
     public static void main(String[] args) {
 //        Random random = new Random();
@@ -18,6 +19,11 @@ public class NumberUtils {
 //        for (int i = 0; i < 10 ; i++) {
 //            System.err.println(randomAlphaNumeric(8));
 //        }
+        StringBuilder sb = new StringBuilder("John");
+        for (int i = 0; i <  10; i++) {
+            sb.append("Doe");
+        }
+        System.err.println(sb.toString());
     }
     public static int randomNumber(int min , int max){
         return random.nextInt((max - min +1)) + min ;
