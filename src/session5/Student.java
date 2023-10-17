@@ -1,5 +1,6 @@
 package session5;
 
+import session7.exception.InvalidAgeException;
 import utils.Human;
 import utils.NumberUtils;
 import utils.StringUtils;
@@ -30,4 +31,17 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static  void checkAge( int age) {
+        try {
+            if (age < 18) {
+                throw new InvalidAgeException("Not enough 18 .....");
+            } else {
+                System.err.println("Wellcome ....");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
