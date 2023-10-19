@@ -1,16 +1,51 @@
 package session7.entity;
 
+import utils.DateTimeUtils;
+
+import java.util.Date;
+
 public class Student {
     private long studentId;
     private String fullname;
     private String address;
     private String tel;
+    private Date dateOfBirth;
+    private Date enterDate;
+    private Integer age;
+    private Integer ageLevel;
 
-    public Student(long studentId, String fullname, String address, String tel) {
+    public Student(long studentId, String fullname, String address, String tel
+            ,Date dateOfBirth,Date enterDate) {
         this.studentId = studentId;
         this.fullname = fullname;
         this.address = address;
         this.tel = tel;
+        this.dateOfBirth = dateOfBirth;
+        this.enterDate = enterDate;
+//        if(this.dateOfBirth != null ){
+//            int age  = DateTimeUtils.getAge(this.dateOfBirth);
+//            this.age = age < 0 ? null : age;
+//        }
+//        if(this.enterDate != null ){
+//            int age  = DateTimeUtils.getAge(this.enterDate);
+//            this.ageLevel = age < 0 ? null : age;
+//        }
+    }
+
+    public Integer getAge() {
+        if (this.dateOfBirth != null) {
+            int age = DateTimeUtils.getAge(this.dateOfBirth);
+            return age < 0 ? null : age;
+        }
+        return null;
+    }
+
+    public Integer getAgeLevel() {
+        if (this.enterDate != null) {
+            int age = DateTimeUtils.getAge(this.enterDate);
+            return age < 0 ? null : age;
+        }
+        return null;
     }
 
     public long getStudentId() {
