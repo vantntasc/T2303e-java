@@ -1,5 +1,9 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class StringUtils {
 
     public static final String alpha =  "abcdefghijklmnopqrstuvwxyz";
@@ -14,6 +18,12 @@ public class StringUtils {
             sb.append(ch);
         }
         return  sb.toString();
+    }
+    public static List<String> getBatchStudent(List<String> students , int offset , int limit){
+        if(students == null){
+            students = new ArrayList<>();
+        }
+        return  students.stream().skip(offset).limit(limit).collect(Collectors.toList());
     }
 
 }
