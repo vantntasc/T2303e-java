@@ -9,6 +9,10 @@ public class Student {
     private int age;
     private String name;
 
+//    public  int compareTo(Student s1){
+//        return this.name.compareTo(s1.name);
+//    }
+
     public static Student randomStudent() {
         Student s = new Student();
         s.name = StringUtils.randomAlphaNumeric(30);
