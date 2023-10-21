@@ -1,9 +1,10 @@
 package session7.entity;
 
+import session8.annotation.Table;
 import utils.DateTimeUtils;
 
 import java.util.Date;
-
+@Table(table_name = "student_table", indexing = true , pattrioning = true)
 public class Student {
     private long studentId;
     private String fullname;
