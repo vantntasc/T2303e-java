@@ -12,8 +12,17 @@ import java.util.stream.Collectors;
 public class Test {
     private static final int NUM_ELEMENTS = 50000000;
     public static void main(String[] args) {
-      processInSinPattern();
-      processInNotSinPattern();
+//      processInSinPattern();
+//      processInNotSinPattern();
+        Test test = new Test();
+        System.err.println(test.toString());
+        System.err.println(test);
+        Student s = Student.randomStudent();
+        Student s1 = Student.randomStudent();
+//        s == s1 // reference - tham chiếu
+        s.equals(s1);
+        System.err.println(s);
+        System.err.println(s.toString());
     }
      static void processInSinPattern(){
         long startTime  = System.currentTimeMillis();
